@@ -4,8 +4,6 @@ import sys
 from pathlib import Path
 
 def find_roblox_player():
-    """Try to find the Roblox player executable in common installation locations."""
-    # Common paths where Roblox might be installed
     possible_paths = [
         Path(os.environ.get('LOCALAPPDATA', '')) / "Roblox" / "Versions",
         Path(os.environ.get('PROGRAMFILES', '')) / "Roblox" / "Versions",
@@ -16,7 +14,6 @@ def find_roblox_player():
         if not base_path.exists():
             continue
             
-        # Look through version folders
         for version_folder in base_path.iterdir():
             player_path = version_folder / "RobloxPlayerBeta.exe"
             if player_path.exists():
@@ -25,7 +22,6 @@ def find_roblox_player():
     return None
 
 def launch_roblox():
-    """Launch Roblox player directly."""
     roblox_path = find_roblox_player()
     
     if not roblox_path:
@@ -55,6 +51,5 @@ if __name__ == "__main__":
     
     if success:
         print("Done! You can close this window.")
-        # Wait a bit before closing
         import time
         time.sleep(3)
